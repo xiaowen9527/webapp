@@ -7,6 +7,7 @@
 
 <script>
 import FooterGuide from "@/components/FooterGuide/FooterGuide";
+import { mapState } from "vuex";
 export default {
   name: "App",
   components: {

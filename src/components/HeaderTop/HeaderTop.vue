@@ -9,15 +9,29 @@
 </template>
 
 <script>
+
 export default {
   name: "HeaderTop",
   props:{
       title:String
   },
-  data() {
-    return {
-     
-    };
+  mounted() {
+        this.getAddress()
+  },
+  methods: {
+      getAddress(){
+          this.$http.get('api/position/40.10038,116.36867')
+            .then(res=>{
+                if(res.status == 200 && res.data.data){
+                    let data = res.data.data
+                    console.log(data);
+                    this.$store.dispatch('reveive_address',data.address)
+                }
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+      }
   }
 };
 </script>

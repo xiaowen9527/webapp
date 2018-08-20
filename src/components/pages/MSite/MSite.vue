@@ -2,7 +2,7 @@
     <section class="msite">
         <!--首页头部-->
 
-        <HeaderTop title="广州市白云区太和镇高桥西路北二巷">
+        <HeaderTop :title="this.address">
             <span class="header_search" slot='left'>
                 <i class="iconfont icon-sousuo"></i>
             </span>
@@ -139,6 +139,7 @@ import "swiper/dist/css/swiper.min.css";
 import HeaderTop from "@/components/HeaderTop/HeaderTop";
 import ShopList from "@/components/ShopList/ShopList";
 
+import { mapState } from "vuex";
 export default {
   name: "MSite",
   mounted() {
@@ -152,6 +153,9 @@ export default {
         el: ".swiper-pagination"
       }
     });
+  },
+  computed: {
+      ...mapState(['address'])
   },
   components: {
     HeaderTop,ShopList
