@@ -3,8 +3,8 @@ export default{
     reveive_address({commit},address){
         commit('REVEIVE_ADDRESS',address)
     },
-    reveive_city({commit},city){
-        commit('REVEIVE_CITY',city)
+    reveive_category({commit},category){
+        commit('REVEIVE_CATEGORY',category)
     },
     reveive_name({commit},name){
         commit('REVEIVE_NAME',name)

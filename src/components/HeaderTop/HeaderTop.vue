@@ -12,11 +12,17 @@
 
 export default {
   name: "HeaderTop",
+  data() {
+      return {
+          category:null
+      }
+  },
   props:{
       title:String
   },
   mounted() {
         this.getAddress()
+        this.getCategory()
   },
   methods: {
       getAddress(){
@@ -24,8 +30,19 @@ export default {
             .then(res=>{
                 if(res.status == 200 && res.data.data){
                     let data = res.data.data
-                    console.log(data);
                     this.$store.dispatch('reveive_address',data.address)
+                }
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+      },
+      getCategory(){
+          this.$http.get('api/index_category')
+            .then(res=>{
+                if(res.status == 200 && res.data.data){
+                    let category = res.data.data
+                    this.$store.dispatch('reveive_category',category)
                 }
             })
             .catch(err=>{

@@ -4,8 +4,8 @@ export default {
     REVEIVE_ADDRESS(state,address){
         state.address = address
     },
-    REVEIVE_CITY(state,city){
-        state.city = city
+    REVEIVE_CATEGORY(state,category){
+        state.category = category
     },
     REVEIVE_NAME(state,name){
         state.name = name
