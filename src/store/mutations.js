@@ -7,8 +7,8 @@ export default {
     REVEIVE_CATEGORY(state,category){
         state.category = category
     },
-    REVEIVE_NAME(state,name){
-        state.name = name
+    REVEIVE_SHOP(state,shops){
+        state.shops = shops
     },
 
 }

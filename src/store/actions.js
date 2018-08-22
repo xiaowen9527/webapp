@@ -6,8 +6,8 @@ export default{
     reveive_category({commit},category){
         commit('REVEIVE_CATEGORY',category)
     },
-    reveive_name({commit},name){
-        commit('REVEIVE_NAME',name)
+    reveive_shop({commit},shops){
+        commit('REVEIVE_SHOP',shops)
     },
 
 }

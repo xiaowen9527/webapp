@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MSite from '@/components/pages/MSite/MSite'
-import Search from '@/components/pages/Search/Search'
-import Order from '@/components/pages/Order/Order'
-import Profile from '@/components/pages/Profile/Profile'
-import Login from '@/components/pages/Login/Login'
+import MSite from '@/pages/MSite/MSite'
+import Search from '@/pages/Search/Search'
+import Order from '@/pages/Order/Order'
+import Profile from '@/pages/Profile/Profile'
+import Login from '@/pages/Login/Login'
 
 Vue.use(Router)
 

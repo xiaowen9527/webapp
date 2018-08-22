@@ -22,7 +22,6 @@ export default {
   },
   mounted() {
         this.getAddress()
-        this.getCategory()
   },
   methods: {
       getAddress(){
@@ -31,18 +30,6 @@ export default {
                 if(res.status == 200 && res.data.data){
                     let data = res.data.data
                     this.$store.dispatch('reveive_address',data.address)
-                }
-            })
-            .catch(err=>{
-                console.log(err);
-            })
-      },
-      getCategory(){
-          this.$http.get('api/index_category')
-            .then(res=>{
-                if(res.status == 200 && res.data.data){
-                    let category = res.data.data
-                    this.$store.dispatch('reveive_category',category)
                 }
             })
             .catch(err=>{
@@ -57,7 +44,7 @@ export default {
 .header
     background-color #02a774
     position fixed
-    z-index 100
+    z-index 999
     left 0
     top 0
     width 100%
